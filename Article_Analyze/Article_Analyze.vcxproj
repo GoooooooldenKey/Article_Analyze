@@ -137,6 +137,11 @@
     <ClInclude Include="OList.h" />
     <ClInclude Include="OString.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="article - 副本 (2).txt" />
+    <Text Include="article - 副本.txt" />
+    <Text Include="article.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
