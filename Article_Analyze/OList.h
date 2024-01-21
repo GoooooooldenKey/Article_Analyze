@@ -103,6 +103,27 @@ public:
         return NPOS;
     }
 
+    //移除指定下标的元素
+    void remove(ListIndex Tindex) {
+        if (Tindex < 0 || Tindex >= size) {
+            throw std::out_of_range("Failed in removing element: index out of range");
+        }
+
+        T* p_newlist = new T[size - 1];
+        int newindex = 0;
+        int oldindex = 0;
+        while (oldindex < size) {
+            if (oldindex != Tindex) {
+                p_newlist[newindex] = p_list[oldindex];
+                newindex++;
+            }
+            oldindex++;
+        }
+        delete[] p_list;
+        p_list = p_newlist;
+        size--;
+    }
+
     void clear() {
         size = 0;
         delete[] p_list;
